@@ -1,25 +1,21 @@
 #Create a command-line tool that accepts a city's forecast. Leverages Open Weather Map API to fetch weather data and parse it using Python. Your solution should demonstrate how GitHub Copilot can help you with API usage, data parsing, and error handling.
-
-#pip install requests for using the requests
-
-
 # Importing the requests library
 import datetime
 import requests
 import argparse
 import json
 import sys
+import pytz
 #function to get weather data for a city
 def get_weather(city):
     api_key = "f5666dfdd395817a68a86cd862e98961"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
+    #sunrise sunset url
+    sunrise_sunset_url=f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
-#function that converts kelvin to celsius
+#function that ocnverts kelvin to celsius
     def kelvin_to_celsius(kelvin):
         return kelvin - 273.15
-#Add a function to convert the time from UTC to the local time.
-    def utc_to_local(utc):
-        return utc + timezone
 #Add a function to convert the pressure from hPa to mmHg or inHg.   
     def pressure_conversion(pressure):
         return pressure * 0.750062
@@ -30,15 +26,7 @@ def get_weather(city):
 # 1 km = 1000 meters
 
     def visibility_conversion(visibility):
-        return visibility * 0.001
-#function for Sunrise to coutry specific local time
-    def sunrise_to_local(sunrise):
-        return sunrise + timezone
-#function for Sunset to coutry specific local time
-    def sunset_to_local(sunset):
-        return sunset + timezone
-
-        
+        return visibility * 0.001        
 
     #try to get data from the api
     try:
@@ -61,14 +49,19 @@ def get_weather(city):
         wind_deg=data["wind"]["deg"]
         clouds=data["clouds"]["all"]
         country=data["sys"]["country"]
-        timezone=data["timezone"]
-        timezone = data["timezone"] / 3600  # Convert seconds to hours
-        sunrise=sunrise_to_local(data["sys"]["sunrise"])
-        sunset=sunrise_to_local(data["sys"]["sunset"])
-        #format timezones
-        sunrise = datetime.datetime.fromtimestamp(data["sys"]["sunrise"]).strftime("%H:%M:%S")
-        sunset = datetime.datetime.fromtimestamp(data["sys"]["sunset"]).strftime("%H:%M:%S")
+        timezone_offset = data["timezone"]
+        sunrise = datetime.datetime.utcfromtimestamp(data["sys"]["sunrise"] + timezone_offset).strftime("%H:%M:%S")
+        sunset = datetime.datetime.utcfromtimestamp(data["sys"]["sunset"] + timezone_offset).strftime("%H:%M:%S")
         name=data["name"]
+
+        #fetch sunrise and sunset data
+        sunrise_sunset_response=requests.get(sunrise_sunset_url)
+        sunrise_sunset_response.raise_for_status()
+        sunrise_sunset_data=sunrise_sunset_response.json()
+        sunrise_sunset_timezone_offset = sunrise_sunset_data["timezone"]
+        sunrise_sunset_sunrise = datetime.datetime.utcfromtimestamp(sunrise_sunset_data["sys"]["sunrise"] + sunrise_sunset_timezone_offset).strftime("%H:%M:%S")
+        sunrise_sunset_sunset = datetime.datetime.utcfromtimestamp(sunrise_sunset_data["sys"]["sunset"] + sunrise_sunset_timezone_offset).strftime("%H:%M:%S")
+        
 
         #printing the weather data
         print(f"Weather forecast for {city}, {country}:")
@@ -78,12 +71,11 @@ def get_weather(city):
         print(f"Feels like: {feels_like} C")
         print(f"Minimum temperature: {temp_min} C")
         print(f"Maximum temperature: {temp_max} C")
-        print(f"Pressure: {pressure} mmHg")
+        print(f"Pressure: {pressure}")
         print(f"Humidity: {humidity}")
-        print(f"Visibility: {visibility} km")
+        print(f"Visibility: {visibility}")
         print(f"Sunrise: {sunrise}")
         print(f"Sunset: {sunset}")
-        print(f"Timezone: {timezone} hours")
         sys.exit(0)
     #except the requests exception
     except requests.exceptions.RequestException as err:
@@ -98,9 +90,7 @@ def get_weather(city):
         print(err)
         sys.exit(1)
    
-
 #main function
-
 def main():
     parser = argparse.ArgumentParser(description="Get the weather forecast for a city.")
     parser.add_argument("city", type=str, help="Name of the city")
