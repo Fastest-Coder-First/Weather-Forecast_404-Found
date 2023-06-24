@@ -39,9 +39,9 @@ This command-line tool allows you to fetch and display weather forecast data for
 ```
 - Run the code by using,
 ```bash
-  python main.py <city>
+  python main.py (city)
 ```
-- where inplace of '<city>' type the name of city whose weather details you want to see. 
+- where inplace of 'city' type the name of city whose weather details you want to see. 
 
 ## Snapshots 📷
 <img width="487" alt="image" src="https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found/assets/88924201/8c3786a4-6586-47c6-9ce4-f67fd30329d0">
