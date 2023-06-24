@@ -1,4 +1,4 @@
-# Weather Forecast Command-Line Tool :sunny: :rainy: :umbrella:
+# Weather Forecast Command-Line Tool 
 This command-line tool allows you to fetch and display weather forecast data for a specific city using the Open Weather Map API. It leverages Python to make API requests, parse the data, and provide a user-friendly output.
 
 ## Features
