@@ -26,12 +26,6 @@ Copy code
 python main.py <city>
 ## Getting Started
 
-1. Clone the repository:
-
-   ```shell
-   git clone https://git clone https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found.git
-   cd weather-forecast-tool
-
 ## Snapshots
 <img width="487" alt="image" src="https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found/assets/88924201/8c3786a4-6586-47c6-9ce4-f67fd30329d0">
 
