@@ -1,5 +1,8 @@
 #Create a command-line tool that accepts a city's forecast. Leverages Open Weather Map API to fetch weather data and parse it using Python. Your solution should demonstrate how GitHub Copilot can help you with API usage, data parsing, and error handling.
 
+#pip install requests for using the requests
+
+
 # Importing the requests library
 import datetime
 import requests
@@ -11,7 +14,7 @@ def get_weather(city):
     api_key = "f5666dfdd395817a68a86cd862e98961"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
 
-#function that ocnverts kelvin to celsius
+#function that converts kelvin to celsius
     def kelvin_to_celsius(kelvin):
         return kelvin - 273.15
 #Add a function to convert the time from UTC to the local time.
