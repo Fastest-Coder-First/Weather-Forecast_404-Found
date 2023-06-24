@@ -57,8 +57,8 @@ Create a command-line tool that accepts a city's name and returns the weather fo
 ## :busts_in_silhouette: Collaborators
 
 - [Fastest-Coder-First](https://github.com/Fastest-Coder-First)
-- [poojaharihar03](https://github.com/poojaharihar03)
-- [anish2105](https://github.com/anish2105)
-- [anish2105](https://github.com/ishita-singhal)
+- [Pooja Harihar](https://github.com/poojaharihar03)
+- [Anich V V](https://github.com/anish2105)
+- [Ishita Singhal](https://github.com/ishita-singhal)
 
 
