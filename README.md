@@ -1,4 +1,4 @@
-# Weather Forecast Command-Line Tool
+# Weather Forecast Command-Line Tool :sunny: :rainy: :umbrella:
 This command-line tool allows you to fetch and display weather forecast data for a specific city using the Open Weather Map API. It leverages Python to make API requests, parse the data, and provide a user-friendly output.
 
 ## Features
@@ -9,6 +9,11 @@ This command-line tool allows you to fetch and display weather forecast data for
 - Converts pressure from hPa to mmHg
 - Converts visibility from meters to kilometres
 - Displays additional weather data such as humidity, wind speed, clouds, sunrise, sunset, and timezone
+
+## Credits :clap:
+
+- Powered OpenWeatherMap API for weather data.
+- AI assistance provided by GitHub Copilot for ease of code and task generation
 
 ## Prerequisites
 
@@ -21,10 +26,7 @@ This command-line tool allows you to fetch and display weather forecast data for
 - import sys
 
 ## Run the command-line tool:
-shell
-Copy code
 python main.py <city>
-## Getting Started
 
 ## Snapshots
 <img width="487" alt="image" src="https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found/assets/88924201/8c3786a4-6586-47c6-9ce4-f67fd30329d0">
