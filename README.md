@@ -58,7 +58,7 @@ Create a command-line tool that accepts a city's name and returns the weather fo
 
 - [Fastest-Coder-First](https://github.com/Fastest-Coder-First)
 - [Pooja Harihar](https://github.com/poojaharihar03)
-- [Anich V V](https://github.com/anish2105)
+- [Anish V V](https://github.com/anish2105)
 - [Ishita Singhal](https://github.com/ishita-singhal)
 
 
