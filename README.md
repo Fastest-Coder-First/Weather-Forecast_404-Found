@@ -35,6 +35,21 @@ Create a command-line tool that accepts a city's name and returns the weather fo
 - import json
 - import sys
 
+## :building_construction: Architectural Flow
+
+The Weather CLI tool follows a simple and straightforward architectural flow. The main components involved in the flow are:
+
+1. **User Input**: Retrieve the weather forecast for which the user enters the city name.
+
+2. **Command-Line Interface**: The command-line interface processes user input and forwards it to the next stage.
+
+3. **API Integration**: The API integration component retrieves weather data for the given city using the OpenWeatherMap API. It creates the API request URL using the city name and API key provided, then sends a GET request to the API endpoint.
+
+4. **Data Parsing**: After receiving the API response, the data parsing component retrieves the pertinent weather information from the JSON response. It retrieves the primary weather conditions, full descriptions, temperature, pressure, humidity, visibility, sunrise and sunset times.
+
+5. **Data Conversion**: During this stage, certain data conversions are performed. They include a temperature from kelvin to Celsius, pressure to mmHg, and visibility to km. 
+
+
 ## Run the command-line tool 🚀:
 - First install all dependencies by running,
 ```bash
