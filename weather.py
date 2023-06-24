@@ -17,9 +17,6 @@ def get_weather(city):
 #Add a function to convert the time from UTC to the local time.
     def utc_to_local(utc):
         return utc + timezone
-#Add a function to convert the wind speed from m/s to km/h or mph.
-    def wind_speed_conversion(wind_speed):  
-        return wind_speed * 3.6
 #Add a function to convert the pressure from hPa to mmHg or inHg.   
     def pressure_conversion(pressure):
         return pressure * 0.750062
@@ -31,6 +28,13 @@ def get_weather(city):
 
     def visibility_conversion(visibility):
         return visibility * 0.001
+#function for Sunrise to coutry specific local time
+    def sunrise_to_local(sunrise):
+        return sunrise + timezone
+#function for Sunset to coutry specific local time
+    def sunset_to_local(sunset):
+        return sunset + timezone
+
         
 
     #try to get data from the api
@@ -47,23 +51,22 @@ def get_weather(city):
         feels_like=round(kelvin_to_celsius(data["main"]["feels_like"]),2)
         temp_min=round(kelvin_to_celsius(data["main"]["temp_min"]),2)
         temp_max=round(kelvin_to_celsius(data["main"]["temp_max"]),2)
-        pressure=data["main"]["pressure"]
+        pressure=pressure_conversion(data["main"]["pressure"])
         humidity=data["main"]["humidity"]
-        visibility=data["visibility"]
+        visibility=visibility_conversion(data["visibility"])
         wind_speed=data["wind"]["speed"]
         wind_deg=data["wind"]["deg"]
         clouds=data["clouds"]["all"]
         country=data["sys"]["country"]
-        sunrise=data["sys"]["sunrise"]
-        sunset=data["sys"]["sunset"]
         timezone=data["timezone"]
         timezone = data["timezone"] / 3600  # Convert seconds to hours
+        sunrise=sunrise_to_local(data["sys"]["sunrise"])
+        sunset=sunrise_to_local(data["sys"]["sunset"])
         #format timezones
         sunrise = datetime.datetime.fromtimestamp(data["sys"]["sunrise"]).strftime("%H:%M:%S")
         sunset = datetime.datetime.fromtimestamp(data["sys"]["sunset"]).strftime("%H:%M:%S")
         name=data["name"]
 
-    #finction to convert templeture from kelvin to celsius
         #printing the weather data
         print(f"Weather forecast for {city}, {country}:")
         print(f"Main weather: {main_weather}")
