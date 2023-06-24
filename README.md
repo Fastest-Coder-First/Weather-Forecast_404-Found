@@ -65,7 +65,8 @@ The Weather CLI tool follows a simple and straightforward architectural flow. Th
   python main.py bangalore
 ```
 ## Snapshots 📷
-<img width="484" alt="image" src="https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found/assets/88924201/b906538f-ee5c-4a55-b217-058afa4a07cf">
+<img width="472" alt="image" src="https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found/assets/88924201/37b68a97-a931-4991-9278-bd8876222559">
+
 
 
 
