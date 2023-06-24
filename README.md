@@ -14,9 +14,11 @@ This command-line tool allows you to fetch and display weather forecast data for
 
 - Powered OpenWeatherMap API for weather data.
 - AI assistance provided by GitHub Copilot for ease of code and task generation
-
-GitHub Copilot is an AI-powered coding tool that suggests code snippets and completes code as you type. It is an extension of the Visual Studio Code editor and it can be used in various programming languages such as Python, JavaScript, TypeScript, and many more.
-The utilization of Copilot in our code significantly reduced our workload. It provided helpful suggestions in the form of code snippets. Activating Copilot is as simple as only adding a comment, and when we write a regular English sentence within that comment, Copilot intelligently converts it into a relevant code snippet and gives suggestions. It just needs a comment to activate it and  if we use an English sentence it will convert that to a code snippet
+  
+## ## Copilot 
+- GitHub Copilot is an AI-powered coding tool that suggests code snippets and completes code as you type. It is an extension of the Visual Studio Code editor and it can be used in various programming languages such as Python, JavaScript, TypeScript, and many more.
+- The utilization of Copilot in our code significantly reduced our workload. It provided helpful suggestions in the form of code snippets. Activating Copilot is as simple as only adding a comment, and when we write a regular English sentence within that comment, Copilot intelligently converts it into a relevant code snippet and gives suggestions.
+- It just needs a comment to activate it and  if we use an English sentence it will convert that to a code snippet
 
 
 ## Prerequisites 🛠️
