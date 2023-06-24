@@ -1,7 +1,7 @@
 # Weather Forecast Command-Line Tool  🌞🌧️
 This command-line tool allows you to fetch and display weather forecast data for a specific city using the Open Weather Map API. It leverages Python to make API requests, parse the data, and provide a user-friendly output.
 
-## Problem Statement
+## Problem Statement :clipboard
 Create a command-line tool that accepts a city's name and returns the weather forecast. Leverages Open Weather Map API to fetch weather data and parse it using Python. Your solution should demonstrate how GitHub Copilot can help you with API usage, data parsing, and error handling.
 
 ## Features
@@ -50,10 +50,15 @@ Create a command-line tool that accepts a city's name and returns the weather fo
   python main.py bangalore
 ```
 ## Snapshots 📷
-<img width="487" alt="image" src="https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found/assets/88924201/8c3786a4-6586-47c6-9ce4-f67fd30329d0">
+<img width="484" alt="image" src="https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found/assets/88924201/b906538f-ee5c-4a55-b217-058afa4a07cf">
 
 
-## Collaborators:
-Thank you @anish2015 and @ishita-singhal for their valuable input!.
+
+## :busts_in_silhouette: Collaborators
+
+- [Fastest-Coder-First](https://github.com/Fastest-Coder-First)
+- [poojaharihar03](https://github.com/poojaharihar03)
+- [anish2105](https://github.com/anish2105))
+- [anish2105](https://github.com/ishita-singhal))
 
 
