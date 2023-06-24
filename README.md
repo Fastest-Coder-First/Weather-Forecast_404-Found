@@ -29,7 +29,7 @@ python main.py <city>
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/weather-forecast-tool.git
+   git clone https://git clone https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found.git
    cd weather-forecast-tool
 
 ## Snapshots
