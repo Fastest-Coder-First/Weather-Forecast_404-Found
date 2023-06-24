@@ -28,7 +28,11 @@ This command-line tool allows you to fetch and display weather forecast data for
 ## Run the command-line tool 🚀:
 python main.py <city>
 
-## Snapshots
+## Snapshots 📷
 <img width="487" alt="image" src="https://github.com/Fastest-Coder-First/Weather-Forecast_404-Found/assets/88924201/8c3786a4-6586-47c6-9ce4-f67fd30329d0">
+
+
+## Collaborators:
+Thank you @anish2015 and @ishita-singhalfor their valuable input!.
 
 
