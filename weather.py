@@ -110,10 +110,3 @@ def main():
     get_weather(args.city)
 if __name__ == "__main__":
     main()
-
-# 9. Add a function to convert the date from UTC to the local time.
-# 10. Add a function to convert the time from UTC to the local time.
-# 11. Add a function to convert the date and time from UTC to the local time.
-# 12. Add a function to convert the date and time from UTC to the local time.
-# 13. Add a function to convert the date and time from UTC to the local time.
-#   Add a function to convert the date and time from UTC to the local time.  
